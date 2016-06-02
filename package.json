@@ -1,0 +1,62 @@
+{
+  "name": "esdoc-plugin-npm",
+  "version": "0.1.0",
+  "homepage": "https://github.com/typhonjs-node-esdoc/esdoc-plugin-npm/",
+  "description": "A plugin for ESDoc that enables end to end documentation linking NPM managed packages in addition to a source root.",
+  "license": "MPL-2.0",
+  "author": {
+    "name": "Mike Leahy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/typhonjs-node-esdoc/esdoc-plugin-npm.git"
+  },
+  "maintainers": [
+    {
+      "name": "Mike Leahy",
+      "email": "support@typhonjs.io"
+    }
+  ],
+  "dependencies": {
+    "fs-extra": "^0.30.0"
+  },
+  "devDependencies": {
+    "typhonjs-config-eslint": "^0.4.0",
+    "typhonjs-npm-build-test": "^0.1.0"
+  },
+  "scripts": {
+    "build": "babel-node ./node_modules/typhonjs-npm-scripts-build-babel/scripts/build.js",
+    "esdoc": "esdoc -c .esdocrc",
+    "eslint": "eslint .",
+    "prepublish": "babel-node ./node_modules/typhonjs-npm-scripts-publish/scripts/prepublish.js",
+    "test": "babel-node ./node_modules/typhonjs-npm-scripts-test-mocha/scripts/mocha.js",
+    "test-coverage": "babel-node ./node_modules/typhonjs-npm-scripts-test-mocha/scripts/mocha-istanbul.js"
+  },
+  "typhonjs": {
+    "scm": {
+      "autoInstallJSPM": false
+    }
+  },
+  "keywords": [
+    "esdoc",
+    "jsdoc",
+    "plugin",
+    "npm",
+    "document",
+    "documentation",
+    "ES6",
+    "ES2015",
+    "ECMAScript6",
+    "ECMAScript2015"
+  ],
+  "main": "dist/plugin.js",
+  "files": [
+    "dist",
+    "src",
+    "AUTHORS.md"
+  ],
+  "directories": {},
+  "bugs": {
+    "url": "https://github.com/typhonjs-node-esdoc/esdoc-plugin-npm/issues"
+  }
+}
